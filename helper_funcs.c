@@ -20,7 +20,7 @@ int iscommand(char **tokens, char *buffer)
 	else if (_strcmp(tokens[0], "push") == 0)
 	{
 
-		print_string(tokens[1]);
+		print_string(tokens[1]); /* replace with adding to stack */
 		print_string("\n");
 		return (2);
 	}
