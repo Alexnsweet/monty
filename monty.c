@@ -20,4 +20,10 @@ int main(void)
 		if (tokens != NULL)
 		{
 			/* monty compare the things and runs the right code */
+			iscommand(tokens, buffer);
 		}
+	}
+
+	return (0);
+}
+	
