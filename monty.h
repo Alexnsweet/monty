@@ -35,7 +35,11 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-
+char **tokenizer(char *str, char *delim);
+int _strlen(char *s);
+int _strcmp(char *s1, char *s2);
+int print_string(char *str);
+int iscommand(char **tokens, char *buffer);
 
 
 
