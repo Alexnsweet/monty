@@ -10,15 +10,10 @@
 int iscommand(char **tokens, char *buffer)
 {
 	int i;
-
-	if (_strcmp(tokens[0], "exit") == 0)
+	
+	if (_strcmp(tokens[0], "push") == 0)
 	{
-		free(tokens);
-		free(buffer);
-		_exit(0);
-	}
-	else if (_strcmp(tokens[0], "push") == 0)
-	{
+		printf("made it to push command\n");
 
 		print_string(tokens[1]); /* replace with adding to stack */
 		print_string("\n");
