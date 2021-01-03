@@ -14,16 +14,22 @@ int main(int argc, char **argv)
 
 
 	if (argc == 2)
+	{
 		file_pointer = fopen(argv[1], "r");
 
 		if (file_pointer == NULL)
 		{
-			printf("Error: Can't open file %s", argv[1]);
-			return (0);
+			printf("Error: Can't open file %s\n", argv[1]);
+			return (0); /* Exit status of EXIT_FAILURE */
 		}
+	}
+	else
+	{
+		printf("USAGE: monty file\n");
+		/* Exit status of EXIT_FAILURE */
+	}
 	
 		gl = getline(&buffer, &buffSize, file_pointer);
-
 	if (gl > 0)
 	{
 		tokens = tokenizer(buffer, " ");
