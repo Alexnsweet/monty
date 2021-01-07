@@ -11,6 +11,7 @@ int main(int argc, char **argv)
 	size_t buffSize;
 	int gl;
 	FILE *file_pointer;
+	
 
 
 	if (argc == 2)
@@ -25,14 +26,14 @@ int main(int argc, char **argv)
 	}
 	else
 	{
-		fprintf(stderr, "USAGE: monty file\n");
+		printf("USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
-	
-		gl = getline(&buffer, &buffSize, file_pointer);
-	if (gl > 0)
+
+	while (getline(&buffer, &buffSize, file_pointer) != -1)
 	{
 		tokens = tokenizer(buffer, " ");
+
 
 		if (tokens != NULL)
 		{
