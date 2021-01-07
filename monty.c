@@ -20,13 +20,13 @@ int main(int argc, char **argv)
 		if (file_pointer == NULL)
 		{
 			printf("Error: Can't open file %s\n", argv[1]);
-			return (0); /* Exit status of EXIT_FAILURE */
+			exit(EXIT_FAILURE);
 		}
 	}
 	else
 	{
-		printf("USAGE: monty file\n");
-		/* Exit status of EXIT_FAILURE */
+		fprintf(stderr, "USAGE: monty file\n");
+		exit(EXIT_FAILURE);
 	}
 	
 		gl = getline(&buffer, &buffSize, file_pointer);
